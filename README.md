@@ -28,7 +28,7 @@ The Pomodoro technique is a time management method that breaks work into interva
 
 ## Screenshots
 
-<div style="display: flex; justify-content: space-around;">
+<div style="display: flex; justify-content: space-between;">
     <div style="text-align: center;">
         <img src="pomodoro_home.png" alt="Pomodoro Home" width="200"/>
         <p>Home Screen</p>

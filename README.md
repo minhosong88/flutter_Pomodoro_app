@@ -28,14 +28,20 @@ The Pomodoro technique is a time management method that breaks work into interva
 
 ## Screenshots
 
-### Home Screen
-<img src=pomodoro_home.png" alt="Pomodoro Home" width="100"/>
-
-### Timer Settings
-<img src=pomodoro_setting.jpg" alt="Pomodoro Settings" width="100"/>
-
-### After Setting
-<img src="after_setting.jpg" alt="After Setting" width="100"/>
+<div style="display: flex; justify-content: space-around;">
+    <div style="text-align: center;">
+        <img src="pomodoro_home.png" alt="Pomodoro Home" width="200"/>
+        <p>Home Screen</p>
+    </div>
+    <div style="text-align: center;">
+        <img src="pomodoro_setting.jpg" alt="Pomodoro Settings" width="200"/>
+        <p>Timer Settings</p>
+    </div>
+    <div style="text-align: center;">
+        <img src="after_setting.jpg" alt="After Setting" width="200"/>
+        <p>After Setting</p>
+    </div>
+</div>
 
 ## Installation
 

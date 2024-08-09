@@ -88,34 +88,41 @@ class _HomeScreenState extends State<HomeScreen> {
               flex: 1,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
-                  IconButton(
-                    iconSize: 50,
-                    onPressed: () {
-                      _navigateToSettings();
-                    },
-                    icon: const Icon(Icons.settings),
+                  Tooltip(
+                    message: 'Set Timer',
+                    child: IconButton(
+                      iconSize: 50,
+                      onPressed: () {
+                        _navigateToSettings();
+                      },
+                      icon: const Icon(Icons.settings),
+                    ),
                   ),
-                  IconButton(
-                    iconSize: 50,
-                    onPressed: () {
-                      if (isRunning) {
-                        timer.cancel();
-                        isRunning = false;
-                      } else {
-                        showRestartDialog(context, onRestartPressed);
-                      }
-                    },
-                    color: Theme.of(context).cardColor,
-                    icon: const Icon(
-                      Icons.restart_alt_rounded,
+                  Tooltip(
+                    message: 'Restart',
+                    child: IconButton(
+                      iconSize: 50,
+                      onPressed: () {
+                        if (isRunning) {
+                          timer.cancel();
+                          isRunning = false;
+                        } else {
+                          showRestartDialog(context, onRestartPressed);
+                        }
+                      },
+                      color: Theme.of(context).cardColor,
+                      icon: const Icon(
+                        Icons.restart_alt_rounded,
+                      ),
                     ),
                   ),
                 ],
               ),
             ),
             Flexible(
-              flex: 1,
+              flex: 3,
               child: Container(
                 alignment: Alignment.bottomCenter,
                 child: Text(
@@ -141,7 +148,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             Flexible(
-              flex: 2,
+              flex: 3,
               child: Row(
                 children: [
                   Expanded(
@@ -165,6 +172,9 @@ class _HomeScreenState extends State<HomeScreen> {
                                     .displayLarge!
                                     .color,
                                 fontWeight: FontWeight.w600),
+                          ),
+                          const SizedBox(
+                            height: 15,
                           ),
                           Text(
                             '$totalPomodoros',
